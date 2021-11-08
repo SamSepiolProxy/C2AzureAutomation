@@ -6,6 +6,8 @@ Requires terraform and ansible to be installed.
 
 Login with az login or use an azure sp account.
 
+Configured to use the azure vm address.
+
 ### Deployment
 
 python3 deploymentscript.py --deployment -w 127.0.0.1 -r C2Deployment
