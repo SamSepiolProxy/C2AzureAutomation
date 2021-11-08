@@ -8,6 +8,10 @@ Login with az login or use an azure sp account.
 
 Configured to use the azure vm address.
 
+Before running make a folder in the same directory called keys and then add keys with the following name id_rsa.pub.
+
+This can be adjusted by editing the terraform.tfvars template.
+
 ### Deployment
 
 python3 deploymentscript.py --deployment -w 127.0.0.1 -r C2Deployment
