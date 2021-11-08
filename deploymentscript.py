@@ -41,15 +41,9 @@ def provisiontemplatecompiler(dir, filename, fileoutput, c2Covprivateip):
     with open(fileoutput, "w") as fh:
         fh.write(output_from_parsed_template)
 
-def credcheck ():
-    MANDATORY_ENV_VARS = ["ARM_CLIENT_ID", "ARM_CLIENT_SECRET", "ARM_SUBSCRIPTION_ID", "ARM_TENANT_ID"]
-    for var in MANDATORY_ENV_VARS:
-        if var not in os.environ:
-            print('Credentials are required:\nexport ARM_CLIENT_ID="00000000-0000-0000-0000-000000000000"\nexport ARM_CLIENT_SECRET="00000000-0000-0000-0000-000000000000"\nexport ARM_SUBSCRIPTION_ID="00000000-0000-0000-0000-000000000000"\nexport ARM_TENANT_ID="00000000-0000-0000-0000-000000000000"')
-            sys.exit()
-
+def check ():
     if False == args.deployment == args.provision == args.destroy:
-        print("Select an option --deployment or -- provision")
+        print("Select an option --deployment or -- provision or --destroy")
         sys.exit()
 
 def jsonparser(filejson):
@@ -100,6 +94,8 @@ if __name__ == '__main__':
 
     parser = get_args()
     args = parser.parse_args()
+    
+    check()
 
     if args.deployment:
         deployment()
