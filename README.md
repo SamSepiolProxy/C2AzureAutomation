@@ -46,4 +46,7 @@ ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072 | SecurityProt
 Line 858\
 ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072 | SecurityProtocolType.Ssl3 | SecurityProtocolType.Tls;
 
+#### Mythic
+Wait 5 minutes for it to fully load after provision.
+
 
