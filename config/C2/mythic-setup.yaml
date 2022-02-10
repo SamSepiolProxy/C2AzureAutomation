@@ -19,14 +19,6 @@
         recursive: yes
         dest: /opt/Mythic
         
-    - name: Copy .env file for mythic
-      copy:
-        src:  .env
-        dest: /opt/Mythic/.env
-        owner: root
-        group: root
-        mode: 0555
-    
     - name: Install Docker
       shell:
         chdir: /opt/Mythic
