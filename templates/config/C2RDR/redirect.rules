@@ -1,5 +1,5 @@
 Define REDIR_TARGET example.com
-Define COMMANDSERVERIP 10.10.0.4
+Define COMMANDSERVERIP {{ C2CovPrivateIPTemp }}
 
 RewriteEngine On
 RewriteOptions Inherit
